@@ -1,13 +1,11 @@
 
-import { deleteDuplicates } from './removeDuplicatesFromSortedList';
+import {addTwoNumbers} from './addTwoNumbers'
 
 const inputs = [
-    [[1,1,2,3], [1,2,3]],
-    [[1,1,1,4,4,4,5,55,6,6], [1,4,5,55,6]],
-    [[2,2,4,4,4,5], [2,4,5]]
+   [((2,3),(4,5)), (8,6)]
 ]
 
-test.each(inputs)('return the list with duplicates removed', (arr,expected) => {
-    const result = deleteDuplicates(arr);
+test.each(inputs)('return the list with duplicates removed', ([l1],[l2], expected) => {
+    const result = addTwoNumbers([l1],[l2]);
     expect(result).toBe(expected)
 });
