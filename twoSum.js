@@ -29,3 +29,24 @@ function findIndices(nums,target){
   console.log(findIndices([4,1,7,10],14), [0,3])
   console.log(findIndices([1,9,20,22],42), [2,3])
 
+
+
+function isValid(str){
+  let stack = [];
+  for(let i = 0; i < str.length; i++){
+    let current = str[i];
+    let last = str[str.length - 1];
+    if(current === '('){
+      stack.push(')')
+    } else if(current === '{'){
+      stack.push('}')
+    } else if(current === '['){
+      stack.push(']')
+    } else if(current === last){
+      stack.pop()
+    } else{
+      return false;
+    }
+  }
+  return stack.length === 0;
+}
